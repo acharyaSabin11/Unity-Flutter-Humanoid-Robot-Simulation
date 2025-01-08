@@ -14,15 +14,25 @@ This repository holds the unity project for the "Humanoid Robot" project that is
 
 1. Clone this repository.
 2. Configure a Custom Package.
+
    a. Go to Unity -> Assets -> import package -> custom package
+
    b. Navigate to Asset folder of the project where you can find a file named "flutter_embed_unity_2022_3.unitypackage".
+
    c. Choose the folder and import.
+
    d. In unity import dialogue box, uncheck the Example Folder and then click import. (Note that: the folder FlutterEmbed and its all components need to be imported)
+
 3. Configure The Build Settings(If changed).
+
    a. Go to Unity -> File -> Build Settings -> Player Settings -> Other Settings
+
    b. Change the Scripting Backend to IL2CPP
+
    c. Find Target API Level and set it to Android 5.1 (API Level 22)
+
    d. Leave the Target API Level to Automatic(Highest Installed)
+
 4. Restart the Unity Editor
 5. You should see the "Flutter Embed" tab at the top of your project.
 6. For Android, Click on Flutter Embed -> Export Project to Flutter App (Android Option)
