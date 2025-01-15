@@ -163,6 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.Humanoid_Robot_Simulation_Flutter
+    Standalone: com.DefaultCompany.Humanoid-Robot-Simulation-Flutter
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -743,6 +744,7 @@ PlayerSettings:
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   managedStrippingLevel:
