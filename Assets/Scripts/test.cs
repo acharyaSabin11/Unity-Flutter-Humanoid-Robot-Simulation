@@ -1,45 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+// //using System.Globalization;
+// using System;
+// using UnityEngine;
 
-public class test : MonoBehaviour
-{
-    // public GameObject example;
-    public float rotationSpeed = 50f;  // Speed of rotation in degrees per second
-    public float minRotation = -45f;  // Minimum rotation angle
-    public float maxRotation = 45f;   // Maximum rotation angle
-    public Vector3 rotationAxis = Vector3.up; // Axis to rotate around (default is Y-axis)
+// public class ReceiveFromFlutterRotation : MonoBehaviour
+// {
+//     public GameObject RightShoulderRoll;
+//     public GameObject RightShoulderPitch;
+//     public GameObject RightArm;
+//     public GameObject LeftShoulderPitch;
+//     public GameObject LeftShoulderRoll;
+//     public GameObject LeftArm;
+//     public GameObject Torso;
+//     public GameObject RightHipYaw;
+//     public GameObject RightHipPitch;
+//     public GameObject RightHipRoll;
+//     public GameObject RightKnee;
+//     public GameObject RightAnkle;
+//     public GameObject RightFoot;
+//     public GameObject LeftHipRoll;
+//     public GameObject LeftHipPitch;
+//     public GameObject LeftHipYaw;
+//     public GameObject LeftKnee;
+//     public GameObject LeftAnkle;
+//     public GameObject LeftFoot;
+    
+//     // Called from Flutter:
+//     public void SetRotationAngle(string data)
+//     {
+//         //SendToFlutter.Send("Hey flutter");
+//         try
+//         {
+//             //SendToFlutter.Send($"Sent Data is: {data}");
+//             AngleData angleData = JsonUtility.FromJson<AngleData>(data);
+//             RightShoulderPitch.localRotation = Quaternion.Euler(new Vector3(90, 90, 90));
+           
+//             //SendToFlutter.Send("JSON Parsing Successful. The Rotation for RightShoulderPitch is {angleData.RightShoulderPitch}");
+//         }
+//         catch (Exception)
+//         {
+//             SendToFlutter.Send("Some Error Occured During the JSON Conversion");
 
-    private float currentAngle = 0f;  // Current angle of rotation
-    private bool rotatingForward = true; // Direction of rotation
+//         }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Calculate rotation step
-        float rotationStep = rotationSpeed * Time.deltaTime;
+// }
+// }
 
-        // Check if rotating forward or backward
-        if (rotatingForward)
-        {
-            currentAngle += rotationStep;
-            if (currentAngle >= maxRotation)
-            {
-                currentAngle = maxRotation;
-                rotatingForward = false; // Reverse direction
-            }
-        }
-        else
-        {
-            currentAngle -= rotationStep;
-            if (currentAngle <= minRotation)
-            {
-                currentAngle = minRotation;
-                rotatingForward = true; // Reverse direction
-            }
-        }
-
-        // Apply rotation to the object
-        transform.localRotation = Quaternion.Euler(rotationAxis * currentAngle);
-    }
-}
+// //[System.Serializable]
+// //public class AngleData
+// //{
+    
+// //    public string type;
+// //    public float RightShoulderRoll;
+// //    public float RightShoulderPitch;
+// //    public float RightArm;
+// //    public float LeftShoulderPitch;
+// //    public float LeftShoulderRoll;
+// //    public float LeftArm;
+// //    public float Torso;
+// //    public float RightHipYaw;
+// //    public float RightHipPitch;
+// //    public float RightHipRoll;
+// //    public float RightKnee;
+// //    public float RightAnkle;
+// //    public float RightFoot;
+// //    public float LeftHipRoll;
+// //    public float LeftHipPitch;
+// //    public float LeftHipYaw;
+// //    public float LeftKnee;
+// //    public float LeftAnkle;
+// //    public float LeftFoot;
+// //}
